@@ -12,10 +12,10 @@ nvidia:
     - boost ~mpi
     - python@3.10
     - eccodes@2.25.0%nvhpc +tools +fortran +aec +openmp jp2k=jasper
-    - cmake%gcc
-    - cuda@12.3%gcc
-    - openblas%gcc
-    - hwloc%gcc
+    - cmake
+    - cuda@12.3
+    - openblas
+    - hwloc
     - hdf5%nvhpc +hl
     - netcdf-c
     - netcdf-cxx4
