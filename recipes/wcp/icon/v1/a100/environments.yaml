@@ -1,39 +1,41 @@
 nvidia:
   compiler:
-    - toolchain: gcc
-      spec: gcc
-    - toolchain: llvm
-      spec: nvhpc
+  - toolchain: gcc
+    spec: gcc
+  - toolchain: llvm
+    spec: nvhpc
   unify: true
   mpi:
-    spec: cray-mpich@8.1.30%nvhpc
+    spec: cray-mpich@8.1.28%nvhpc
     gpu: cuda
   specs:
-    - boost ~mpi
-    - python@3.10
-    - eccodes@2.25.0%nvhpc +tools +fortran +aec +openmp jp2k=jasper
-    - cmake
-    - cuda@12.3
-    - openblas
-    - hwloc
-    - hdf5%nvhpc +hl
-    - netcdf-c
-    - netcdf-cxx4
-    - netcdf-fortran%nvhpc
-    - numactl
-    - osu-micro-benchmarks@5.9%nvhpc
-    # everything needed for nccl on SS11
-    - aws-ofi-nccl@master
-    - nccl
-    - nccl-tests
+  - boost ~mpi
+  - cmake
+  - cuda@12.3
+  - eccodes@2.25.0%nvhpc +tools +fortran +aec +openmp jp2k=jasper
+  - openblas
+  - hdf5%nvhpc +hl
+  - hwloc
+  - libxml2
+  - libfyaml
+  - netcdf-c
+  - netcdf-cxx4
+  - netcdf-fortran%nvhpc
+  - numactl
+  - osu-micro-benchmarks@5.9%nvhpc
+  - python@3.10
+  # everything needed for nccl on SS11
+  - aws-ofi-nccl@master
+  - nccl
+  - nccl-tests
   variants:
-    - cuda_arch=80
-    - +mpi
-    - +cuda
+  - cuda_arch=80
+  - +mpi
+  - +cuda
   packages:
-    - curl
-    - gmake
-    - perl
+  - curl
+  - gmake
+  - perl
   views:
     icon:
       link: roots
