@@ -13,6 +13,8 @@ nvidia:
   - cmake
   - cuda@12.3
   - eccodes%nvhpc +tools +fortran +aec +openmp jp2k=jasper
+  - gmake
+  - gnuconfig
   - hdf5%nvhpc +hl
   - hwloc
   - libxml2
@@ -21,6 +23,7 @@ nvidia:
   - netcdf-cxx4
   - netcdf-fortran%nvhpc
   - numactl
+  - openblas%nvhpc
   - osu-micro-benchmarks@5.9%nvhpc
   - python@3.10
   # everything needed for nccl on SS11
@@ -33,7 +36,6 @@ nvidia:
   - +cuda
   packages:
   - curl
-  - gmake
   - perl
   views:
     icon:
