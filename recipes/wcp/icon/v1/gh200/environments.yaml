@@ -12,7 +12,7 @@ nvidia:
   - boost ~mpi
   - cmake
   - cuda@12.3
-  - eccodes%nvhpc +tools +fortran +aec +openmp jp2k=jasper
+  - eccodes@2.25%nvhpc +tools +fortran +aec +openmp jp2k=jasper
   - gmake
   - gnuconfig
   - hdf5%nvhpc +hl
@@ -23,7 +23,7 @@ nvidia:
   - netcdf-cxx4
   - netcdf-fortran%nvhpc
   - numactl
-  - openblas%nvhpc
+#  - openblas%nvhpc
   - osu-micro-benchmarks@5.9%nvhpc
   - python@3.10
   # everything needed for nccl on SS11
