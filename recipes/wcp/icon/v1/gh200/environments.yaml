@@ -23,7 +23,7 @@ nvidia:
   - netcdf-cxx4
   - netcdf-fortran%nvhpc
   - numactl
-#  - openblas%nvhpc
+  - openblas%nvhpc
   - osu-micro-benchmarks@5.9%nvhpc
   - python@3.10
   # everything needed for nccl on SS11
